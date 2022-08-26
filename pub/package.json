@@ -1,0 +1,27 @@
+{
+  "author": "Corno",
+  "bin": {},
+  "dependencies": {
+    "api-astn-escape-string": "^0.1.0"
+  },
+  "files": [
+    "dist",
+    "data"
+  ],
+  "keywords": [],
+  "main": "./dist/index.js",
+  "bugs": {
+    "url": "https://github.com/corno/astn/issues"
+  },
+  "description": "",
+  "homepage": "https://github.com/corno/astn#readme",
+  "license": "ISC",
+  "name": "res-astn-escape-string",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/corno/res-astn-escape-string.git"
+  },
+  "types": "dist/index.d.ts",
+  "version": "0.17.0",
+  "content-fingerprint": "026da5bd4b8b4bd35ec1630c568e3c54fffa12f0"
+}
