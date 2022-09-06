@@ -7,11 +7,11 @@
     "dev-update-dependencies": "./scripts/updatePackage.sh dev",
 
 
-    "update-dependencies": "./scripts/updatePackage.sh pub && ./scripts/updatePackage.sh test",
+    "update-dependencies": "./scripts/update2latestDependencies.sh",
     "pub is changed": "./scripts/isPackageChanged.sh",
     "publish": "./scripts/publish.sh",
 
-    "buildAndTest": "./scripts/buildAndTest.sh"
+    "buildAndTest": "./scripts/buildAndTest.sh .."
   },
   "dependencies": {
     "pareto-buildenvironment": "^0.0.0"

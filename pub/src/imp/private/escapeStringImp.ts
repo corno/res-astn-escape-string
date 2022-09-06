@@ -1,6 +1,6 @@
 import * as api from "api-astn-escape-string"
 
-export const escapeString: api.EscapeString = ($) => {
+export const escapeStringImp: api.FEscapeString = ($) => {
     let out = ""
     for (let i = 0; i !== $.str.length; i += 1) {
         const curChar = $.str.charCodeAt(i)
@@ -28,12 +28,4 @@ export const escapeString: api.EscapeString = ($) => {
         }
     }
     return out
-}
-
-export const escapeMultilineString: api.EscapeMultilineString = ($) => {
-    return $.lines.map((line, index) => `${index === 0 ? "" : $.indentation}${escapeString({
-        str: line,
-        escapeTabsAndNewLines: false,
-        wrapperToEscape: "`",
-    })}`).join("")
 }

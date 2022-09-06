@@ -1,1 +1,1 @@
-export { escapeMultilineString, escapeString } from "./escapeString"
+export * from "./public/escapeString"
