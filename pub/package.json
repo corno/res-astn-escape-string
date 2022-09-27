@@ -2,8 +2,7 @@
   "author": "Corno",
   "bin": {},
   "dependencies": {
-    "api-astn-escape-string": "^0.2.0",
-    "pareto-core-internals": "^0.2.0"
+    "api-astn-escape-string": "^0.3.0"
   },
   "files": [
     "dist",
@@ -24,5 +23,5 @@
   },
   "types": "dist/index.d.ts",
   "version": "0.2.0",
-  "content-fingerprint": "53fe3a48d888ea7cded029639a5d13fb874b5ac1"
+  "content-fingerprint": "9757acffeff8696110a3fd78462c5f364879bc9f"
 }

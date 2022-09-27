@@ -1,7 +1,5 @@
-import * as pi from "pareto-core-internals"
-
 import * as api from "api-astn-escape-string"
-import { escapeStringImp } from "./escapeStringImp"
+import { escapeStringImp } from "./escapeStringImp.p"
 
 export const escapeMultilineStringImp: api.FEscapeMultilineString = ($) => {
     let index = 0
