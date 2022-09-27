@@ -9,15 +9,10 @@ import * as api from "../../interface"
 
 import * as pub from "../../../../pub"
 
-export const createGetTestset: api.XCreateGetTestset = ($d) => {
+export const createGetTestset: api.FCreateGetTestset = ($d) => {
     return () => {
 
-        const builder = pm.createDictionaryBuilder<test.TTestElement>(
-            ["ignore", {}],
-            () => {
-                pl.panic("duplicate key")
-            }
-        )
+        const builder = pm.createUnsafeDictionaryBuilder<test.TTestElement>( )
         function createTest(name: string, actual: string, expected: string) {
             builder.add(name, {
                 type: ["test", {
