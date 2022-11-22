@@ -3,7 +3,6 @@
   "bin": {},
   "dependencies": {
     "api-astn-escape-string": "^0.3.0",
-    "pareto-core": "^0.0.4",
     "pareto-core-internals": "^0.9.0"
   },
   "files": [
