@@ -1,2 +1,2 @@
-
-export * from "./imp"
+export * from "./api"
+export { $a } from "./implementation.generated"

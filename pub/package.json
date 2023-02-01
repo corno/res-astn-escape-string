@@ -1,28 +1,21 @@
 {
+  "name": "XXXX",
   "author": "Corno",
-  "bin": {},
+  "license": "ISC",
+  "description": "resource for escaping ASTN strings",
   "dependencies": {
-    "api-astn-escape-string": "^0.3.0",
+    "glo-pareto-common": "^0.10.0",
     "pareto-core-internals": "^0.11.0"
   },
   "files": [
-    "dist",
-    "data"
+    "dist"
   ],
-  "keywords": [],
-  "main": "./dist/index.js",
-  "bugs": {
-    "url": "https://github.com/corno/astn/issues"
-  },
-  "description": "",
-  "homepage": "https://github.com/corno/astn#readme",
-  "license": "ISC",
-  "name": "res-astn-escape-string",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/corno/res-astn-escape-string.git"
+    "url": "http://github.com/corno/XXXX.git"
   },
+  "main": "dist/index.js",
   "types": "dist/index.d.ts",
-  "version": "0.3.0",
-  "content-fingerprint": "a4622f28aaf9516ad7f8afdc58ec89c44aaffd03"
+  "version": "0.0.0",
+  "content-fingerprint": "60d2f6602684985a930f03e8cc2d4b7748cbf379"
 }
