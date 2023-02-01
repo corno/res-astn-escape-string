@@ -1,5 +1,5 @@
 {
-  "name": "XXXX",
+  "name": "res-astn-escape-string",
   "author": "Corno",
   "license": "ISC",
   "description": "resource for escaping ASTN strings",
@@ -16,6 +16,6 @@
   },
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
-  "version": "0.0.0",
+  "version": "0.4.0",
   "content-fingerprint": "60d2f6602684985a930f03e8cc2d4b7748cbf379"
 }
