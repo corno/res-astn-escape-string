@@ -7,8 +7,6 @@ const d = pr.wrapRawDictionary
 import { $ as api } from "./api.p"
 
 export const $: mproject.TProject = {
-    'name': "XXXX",
-
     'author': "Corno",
     'description': "resource for escaping ASTN strings",
     'license': "ISC",
