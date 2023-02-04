@@ -5,7 +5,7 @@ import {
     typeReference,
     interfaceReference,
     null_,
-    method, dictionary, group, member, taggedUnion, types, func, data, string, boolean,
+    method, dictionary, group, member, taggedUnion, types, func, data, string, boolean, parameter, template,
 } from "lib-pareto-typescript-project/dist/submodules/glossary/shorthands.p"
 
 import { definitionReference, constructor, algorithm } from "lib-pareto-typescript-project/dist/submodules/moduleDefinition/shorthands.p"
@@ -20,12 +20,22 @@ export const $: mmoduleDefinition.TModuleDefinition = {
             "common": "glo-pareto-common",
         }),
         'parameters': d({}),
-        'templates': d({}),
+        'templates': d({
+            "Optional": {
+                'parameters': d({
+                    "Type": {},
+                }),
+                'type': taggedUnion({
+                    "set": parameter("Type"),
+                    "not set": group({}),
+                })
+            }
+        }),
         'types': types({
             "EscapeStringData": group({
                 "str": member(string()),
                 "escapeTabsAndNewLines": member(boolean()),
-                "wrapperToEscape": member(string()),
+                "wrapperToEscape": member(template("Optional", {"Type": string()})),
             }),
             "EscapeMultilineStringData": group({
                 "lines": member(array(string())),

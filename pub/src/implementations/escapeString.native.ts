@@ -1,3 +1,5 @@
+import * as pi from 'pareto-core-internals'
+
 import * as api from "../api"
 
 export const $$: api.CescapeString = ($) => {
@@ -26,8 +28,6 @@ export const $$: api.CescapeString = ($) => {
 
         if ($.str[i] === "\\") {
             out += "\\\\"
-        } else if ($.str[i] === $.wrapperToEscape) {
-            out += "\\" + $.wrapperToEscape
         } else if ($.str[i] === "\n") {
             out += $.escapeTabsAndNewLines ? "\\n" : $.str[i]
         } else if ($.str[i] === "\r") {
@@ -38,7 +38,19 @@ export const $$: api.CescapeString = ($) => {
             //control character (some of them have already been escaped above)
             out += "\\u" + padStart(curChar.toString(16).toUpperCase(), 4, "0")
         } else {
-            out += $.str[i]
+            if ($.wrapperToEscape[0] === 'set') {
+                const str = $.str
+                pi.cc($.wrapperToEscape[1], ($) => {
+
+                    if (str[i] === $) {
+                        out += "\\" + $
+                    } else {
+                        out += str[i]
+                    }
+                })
+            } else {
+                out += $.str[i]
+            }
         }
     }
     return out
