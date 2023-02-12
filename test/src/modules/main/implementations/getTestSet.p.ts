@@ -6,7 +6,7 @@ import * as test from "lib-pareto-test"
 
 import * as api from "../api"
 
-import * as pub from "../../../../../pub/dist"
+import * as pub from "../../../../../pub"
 
 export const $$: api.CgetTestSet = () => {
 
