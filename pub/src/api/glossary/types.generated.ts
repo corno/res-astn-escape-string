@@ -2,36 +2,42 @@ import * as pt from 'pareto-core-types'
 
 import * as mcommon from "glo-pareto-common"
 
-export namespace VOptional {
+export namespace T {
     
-    export namespace Onot__set {}
-    export type Onot__set<AType> = {}
-}
-export type VOptional<AType> = 
-    | ['not set', VOptional.Onot__set<AType>]
-    | ['set', AType]
-
-export type MOptional<AType> = VOptional<AType>
-
-export namespace GEscapeMultilineStringData {
+    export namespace EscapeMultilineStringData {
+        
+        export type indentation = string
+        
+        export namespace lines {
+            
+            export type A = string
+        }
+        
+        export type lines = pt.Array<string>
+    }
     
-    export namespace Plines {}
-    export type Plines = pt.Array<string>
-}
-export type GEscapeMultilineStringData = {
-    readonly 'indentation': string
-    readonly 'lines': GEscapeMultilineStringData.Plines
-}
-export type UEscapeMultilineStringData = GEscapeMultilineStringData
-
-export namespace GEscapeStringData {
+    export type EscapeMultilineStringData = {
+        readonly 'indentation': string
+        readonly 'lines': pt.Array<string>
+    }
     
-    export namespace PwrapperToEscape {}
-    export type PwrapperToEscape = MOptional<string>
+    export namespace EscapeStringData {
+        
+        export type escapeTabsAndNewLines = boolean
+        
+        export type str = string
+        
+        export namespace wrapperToEscape {
+            
+            export type O = string
+        }
+        
+        export type wrapperToEscape = [ false ] | [ true, string]
+    }
+    
+    export type EscapeStringData = {
+        readonly 'escapeTabsAndNewLines': boolean
+        readonly 'str': string
+        readonly 'wrapperToEscape': [ false ] | [ true, string]
+    }
 }
-export type GEscapeStringData = {
-    readonly 'escapeTabsAndNewLines': boolean
-    readonly 'str': string
-    readonly 'wrapperToEscape': GEscapeStringData.PwrapperToEscape
-}
-export type UEscapeStringData = GEscapeStringData

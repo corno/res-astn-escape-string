@@ -38,7 +38,7 @@ export const $$: api.CescapeString = ($) => {
             //control character (some of them have already been escaped above)
             out += "\\u" + padStart(curChar.toString(16).toUpperCase(), 4, "0")
         } else {
-            if ($.wrapperToEscape[0] === 'set') {
+            if ($.wrapperToEscape[0] === true) {
                 const str = $.str
                 pi.cc($.wrapperToEscape[1], ($) => {
 

@@ -5,7 +5,7 @@ import {
     typeReference,
     interfaceReference,
     null_,
-    method, dictionary, group, member, taggedUnion, types, func, data, string, boolean, parameter, template,
+    method, dictionary, group, member, taggedUnion, types, func, data, string, boolean, type, optional,
 } from "lib-pareto-typescript-project/dist/submodules/glossary/shorthands.p"
 
 import { definitionReference, constructor, algorithm } from "lib-pareto-typescript-project/dist/submodules/moduleDefinition/shorthands.p"
@@ -14,33 +14,22 @@ import * as mmoduleDefinition from "lib-pareto-typescript-project/dist/submodule
 
 const d = pr.wrapRawDictionary
 
-export const $: mmoduleDefinition.TModuleDefinition = {
+export const $: mmoduleDefinition.T.ModuleDefinition = {
     'glossary': {
         'imports': d({
             "common": "glo-pareto-common",
         }),
         'parameters': d({}),
-        'templates': d({
-            "Optional": {
-                'parameters': d({
-                    "Type": {},
-                }),
-                'type': taggedUnion({
-                    "set": parameter("Type"),
-                    "not set": group({}),
-                })
-            }
-        }),
-        'types': types({
-            "EscapeStringData": group({
+        'types': d({
+            "EscapeStringData": type(group({
                 "str": member(string()),
                 "escapeTabsAndNewLines": member(boolean()),
-                "wrapperToEscape": member(template("Optional", {"Type": string()})),
-            }),
-            "EscapeMultilineStringData": group({
+                "wrapperToEscape": member(optional(string())),
+            })),
+            "EscapeMultilineStringData": type(group({
                 "lines": member(array(string())),
                 "indentation": member(string()),
-            })
+            })),
         }),
         'interfaces': d({
         }),

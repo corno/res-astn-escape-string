@@ -26,7 +26,7 @@ export const $$: api.CgetTestSet = () => {
         actual: pub.$a.escapeString({
             str: "bla\nbl'a",
             escapeTabsAndNewLines: true,
-            wrapperToEscape: ['set', "'"],
+            wrapperToEscape: [true, "'"],
         }),
         expected: "bla\\nbl\\'a",
     })
@@ -35,7 +35,7 @@ export const $$: api.CgetTestSet = () => {
         actual: pub.$a.escapeString({
             str: "bla\nbl'a",
             escapeTabsAndNewLines: false,
-            wrapperToEscape: ['set', "'"]
+            wrapperToEscape: [true, "'"]
         }),
         expected: "bla\nbl\\'a",
     })

@@ -9,7 +9,7 @@ export const $$: api.CescapeMultilineString = ($) => {
         out.push(`${index === 0 ? "" : $.indentation}${escapeStringImp({
             str: line,
             escapeTabsAndNewLines: false,
-            wrapperToEscape: ['set', "`"],
+            wrapperToEscape: [true, "`"],
         })}`)
     })
     return out.join("") //???? NO newline needed?
