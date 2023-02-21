@@ -4,7 +4,7 @@ import { $$ as escapeStringImp } from "./escapeString.native"
 export const $$: api.CescapeMultilineString = ($) => {
     let index = 0
     const out: string[] = []
-    $.lines.forEach((line) => {
+    $.lines.__forEach((line) => {
         index += 1
         out.push(`${index === 0 ? "" : $.indentation}${escapeStringImp({
             str: line,
