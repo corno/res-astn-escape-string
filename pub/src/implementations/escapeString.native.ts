@@ -1,8 +1,8 @@
 import * as pi from 'pareto-core-internals'
 
-import * as api from "../api"
+import { CescapeString } from "../api"
 
-export const $$: api.CescapeString = ($) => {
+export const $$:CescapeString = ($) => {
     let out = ""
     for (let i = 0; i !== $.str.length; i += 1) {
         const curChar = $.str.charCodeAt(i)
