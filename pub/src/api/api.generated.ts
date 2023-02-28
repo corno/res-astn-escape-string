@@ -1,11 +1,10 @@
 import * as pt from 'pareto-core-types'
 
-import * as gglo from "./glossary"
+import * as gthis from "./glossary"
 
+export type CescapeMultilineString = gthis.FEscapeMultilineString
 
-export type CescapeMultilineString = gglo.FEscapeMultilineString
-
-export type CescapeString = gglo.FEscapeString
+export type CescapeString = gthis.FEscapeString
 
 export type API = {
     escapeMultilineString: CescapeMultilineString
