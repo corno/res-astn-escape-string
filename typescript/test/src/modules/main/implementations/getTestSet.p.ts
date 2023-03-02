@@ -23,7 +23,7 @@ export const $$:CgetTestSet = () => {
     }
     createTest({
         name: "escaped",
-        actual: gpub.$a.escapeString({
+        actual: gpub.$r.escapeString({
             str: "bla\nbl'a",
             escapeTabsAndNewLines: true,
             wrapperToEscape: [true, "'"],
@@ -32,7 +32,7 @@ export const $$:CgetTestSet = () => {
     })
     createTest({
         name: "not escaped",
-        actual: gpub.$a.escapeString({
+        actual: gpub.$r.escapeString({
             str: "bla\nbl'a",
             escapeTabsAndNewLines: false,
             wrapperToEscape: [true, "'"]
