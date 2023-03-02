@@ -1,6 +1,6 @@
 import * as pi from 'pareto-core-internals'
 
-import { CescapeString } from "../api"
+import { CescapeString } from "../definition/api.generated"
 
 export const $$:CescapeString = ($) => {
     let out = ""

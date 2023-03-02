@@ -1,7 +1,10 @@
-import * as api from "../api"
+import * as gthis from "../definition/glossary"
+
 import { $$ as escapeStringImp } from "./escapeString.native"
 
-export const $$: api.CescapeMultilineString = ($) => {
+import { CescapeMultilineString } from "../definition/api.generated"
+
+export const $$: CescapeMultilineString = ($) => {
     let index = 0
     const out: string[] = []
     $.lines.__forEach((line) => {

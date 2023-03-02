@@ -1,4 +1,4 @@
-import { API } from "./api"
+import { API } from "./definition/api.generated"
 import { $$ as iescapeMultilineString } from "./implementations/escapeMultilineString.native"
 import { $$ as iescapeString } from "./implementations/escapeString.native"
 
