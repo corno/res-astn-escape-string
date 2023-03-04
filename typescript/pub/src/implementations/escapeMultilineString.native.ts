@@ -2,9 +2,9 @@ import * as gthis from "../definition/glossary"
 
 import { $$ as escapeStringImp } from "./escapeString.native"
 
-import { CescapeMultilineString } from "../definition/api.generated"
+import { escapeMultilineString } from "../definition/api.generated"
 
-export const $$: CescapeMultilineString = ($) => {
+export const $$: escapeMultilineString = ($) => {
     let index = 0
     const out: string[] = []
     $.lines.__forEach((line) => {

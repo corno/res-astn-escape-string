@@ -1,6 +1,6 @@
 import * as pt from 'pareto-core-types'
 
-import * as gcommon from "glo-pareto-common"
+import * as g_common from "glo-pareto-common"
 
 export namespace T {
     
@@ -10,7 +10,7 @@ export namespace T {
         
         export namespace lines {
             
-            export type A = string
+            export type T = string
         }
         
         export type lines = pt.Array<string>

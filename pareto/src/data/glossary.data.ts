@@ -32,6 +32,8 @@ export const $: gglossary.T.Glossary<pd.SourceLocation> =  {
             "indentation": member(string()),
         })),
     }),
+    'builders': d({
+    }),
     'interfaces': d({
     }),
     'functions': d({

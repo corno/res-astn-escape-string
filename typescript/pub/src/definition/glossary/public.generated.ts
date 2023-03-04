@@ -1,9 +1,16 @@
 import * as pt from 'pareto-core-types'
 
-import { T   } from './types.generated'
+import { T } from './types.generated'
 
-import * as gcommon from "glo-pareto-common"
+import * as g_common from "glo-pareto-common"
 
-export type FEscapeMultilineString = ($: T.EscapeMultilineStringData,) => gcommon.T.String
+export namespace I {}
 
-export type FEscapeString = ($: T.EscapeStringData,) => gcommon.T.String
+export namespace B {}
+
+export namespace F {
+    
+    export type EscapeMultilineString = ($: T.EscapeMultilineStringData,) => g_common.T.String
+    
+    export type EscapeString = ($: T.EscapeStringData,) => g_common.T.String
+}
