@@ -9,5 +9,5 @@ export const $: gapi.T.API<pd.SourceLocation> = {
     'algorithms': d({
         "escapeMultilineString": algorithm(functionReference("this", {}, "EscapeMultilineString")),
         "escapeString": algorithm(functionReference("this", {}, "EscapeString")),
-    })
+    }),
 }

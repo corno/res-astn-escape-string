@@ -10,7 +10,7 @@ export namespace T {
         
         export namespace lines {
             
-            export type T = string
+            export type A = string
         }
         
         export type lines = pt.Array<string>
