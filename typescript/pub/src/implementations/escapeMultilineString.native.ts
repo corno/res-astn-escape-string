@@ -1,8 +1,8 @@
-import * as gthis from "../definition/glossary"
+import * as gthis from "../glossary"
 
 import { $$ as escapeStringImp } from "./escapeString.native"
 
-import { escapeMultilineString } from "../definition/api.generated"
+import { escapeMultilineString } from "../api.generated"
 
 export const $$: escapeMultilineString = ($) => {
     let index = 0

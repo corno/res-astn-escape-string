@@ -17,19 +17,17 @@ export const $: gproject.T.Project<pd.SourceLocation> = {
         "glo-pareto-common": null,
     }),
     'type': ['resource', {
-        'definition': {
-            'glossary': {
-                'root': glossary,
-                'imports': d({
-                    "common": external("glo-pareto-common"),
-                }),
-            },
-            'api': {
-                'root': api,
-                'imports': d({
-                    "this": this_(),
-                }),
-            },
+        'glossary': {
+            'root': glossary,
+            'imports': d({
+                "common": external("glo-pareto-common"),
+            }),
+        },
+        'api': {
+            'root': api,
+            'imports': d({
+                "this": this_(),
+            }),
         },
         'nativeDependencies': d({}),
         'devDependencies': d({

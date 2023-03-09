@@ -1,6 +1,6 @@
 import * as pi from 'pareto-core-internals'
 
-import { escapeString } from "../definition/api.generated"
+import { escapeString } from "../api.generated"
 
 export const $$:escapeString = ($) => {
     let out = ""
