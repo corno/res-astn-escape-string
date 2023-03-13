@@ -1,14 +1,16 @@
 import * as pd from 'pareto-core-data'
 
 import { external, this_ } from "lib-pareto-typescript-project/dist/submodules/project/shorthands"
-import * as gproject from "lib-pareto-typescript-project/dist/submodules/project"
+
+import * as g_glossary from "lib-pareto-typescript-project/dist/submodules/glossary"
+import * as g_project from "lib-pareto-typescript-project/dist/submodules/project"
 
 const d = pd.d
 
 import { $ as api } from "./api.data"
 import { $ as glossary } from "./glossary.data"
 
-export const $: gproject.T.Project<pd.SourceLocation> = {
+export const $: g_project.T.Project<pd.SourceLocation> = {
     'author': "Corno",
     'description': "resource for escaping ASTN strings",
     'license': "TBD",
@@ -36,11 +38,13 @@ export const $: gproject.T.Project<pd.SourceLocation> = {
             'dependencies': d({
             }),
             'glossary': {
-                'functions': d({}),
                 'parameters': d({}),
+                'imports': d({}),
                 'types': d({}),
-                'builders': d({}),
-                'interfaces': d({}),
+                'type': ['synchronous', {
+                    'builders': d({}),
+                    'functions': d<g_glossary.T.Glossary._ltype.synchronous.functions.D<pd.SourceLocation>>({}),
+                }],
             },
             'imports': d({}),
         }

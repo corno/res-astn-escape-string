@@ -1,4 +1,4 @@
-import * as gthis from "../glossary"
+import * as g_this from "../glossary"
 
 import { $$ as escapeStringImp } from "./escapeString.native"
 

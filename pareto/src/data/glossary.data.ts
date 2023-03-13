@@ -7,20 +7,24 @@ import {
     dictionary, member, taggedUnion, types, group,
     array,
     typeReference,
-    data,
+    sdata,
     boolean,
-    func,
+    sfunc,
     type,
     optional,
-    reference,
     number,
+    externalTypeReference,
+    imp,
 } from "lib-pareto-typescript-project/dist/submodules/glossary/shorthands"
 
-import * as gglossary from "lib-pareto-typescript-project/dist/submodules/glossary"
+import * as g_glossary from "lib-pareto-typescript-project/dist/submodules/glossary"
 const d = pd.d
 
-export const $: gglossary.T.Glossary<pd.SourceLocation> =  {
+export const $: g_glossary.T.Glossary<pd.SourceLocation> = {
     'parameters': d({}),
+    'imports': d({
+        "common": imp({})
+    }),
     'types': d({
         "EscapeStringData": type(group({
             "str": member(string()),
@@ -32,12 +36,13 @@ export const $: gglossary.T.Glossary<pd.SourceLocation> =  {
             "indentation": member(string()),
         })),
     }),
-    'builders': d({
-    }),
-    'interfaces': d({
-    }),
-    'functions': d({
-        "EscapeString": func(typeReference("EscapeStringData"), null, null, data(typeReference("common", "String"), false)),
-        "EscapeMultilineString": func(typeReference("EscapeMultilineStringData"), null, null, data(typeReference("common", "String"), false)),
-    }),
+    'type': ['synchronous', {
+        'builders': d({
+        }),
+        'functions': d({
+            "EscapeString": sfunc(typeReference("EscapeStringData"), null, null, sdata(externalTypeReference("common", "String"))),
+            "EscapeMultilineString": sfunc(typeReference("EscapeMultilineStringData"), null, null, sdata(externalTypeReference("common", "String"))),
+        }),
+
+    }],
 }
