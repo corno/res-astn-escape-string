@@ -6,6 +6,8 @@ import * as g_common from "glo-pareto-common"
 
 export namespace B {}
 
+export namespace C {}
+
 export namespace F {
     
     export type EscapeMultilineString = ($: T.EscapeMultilineStringData) => g_common.T.String
