@@ -40,8 +40,8 @@ export const $: g_glossary.T.Glossary<pd.SourceLocation> = {
         'builders': d({
         }),
         'functions': d({
-            "EscapeString": sfunc(typeReference("EscapeStringData"), null, null, sdata(externalTypeReference("common", "String"))),
-            "EscapeMultilineString": sfunc(typeReference("EscapeMultilineStringData"), null, null, sdata(externalTypeReference("common", "String"))),
+            "EscapeString": sfunc(sdata(typeReference("EscapeStringData")), sdata(externalTypeReference("common", "String"))),
+            "EscapeMultilineString": sfunc(sdata(typeReference("EscapeMultilineStringData")), sdata(externalTypeReference("common", "String"))),
         }),
 
     }],

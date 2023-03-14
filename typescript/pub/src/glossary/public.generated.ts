@@ -8,7 +8,7 @@ export namespace B {}
 
 export namespace F {
     
-    export type EscapeMultilineString = ($: T.EscapeMultilineStringData,) => g_common.T.String
+    export type EscapeMultilineString = ($: T.EscapeMultilineStringData) => g_common.T.String
     
-    export type EscapeString = ($: T.EscapeStringData,) => g_common.T.String
+    export type EscapeString = ($: T.EscapeStringData) => g_common.T.String
 }
