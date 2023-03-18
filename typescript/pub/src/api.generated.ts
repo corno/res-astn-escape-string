@@ -1,12 +1,14 @@
 import * as pt from 'pareto-core-types'
 
 import * as g_this from "./glossary"
-
-export type escapeMultilineString = g_this.F.EscapeMultilineString
-
-export type escapeString = g_this.F.EscapeString
+export namespace A {
+    
+    export type escapeMultilineString = g_this.SYNC.F.EscapeMultilineString
+    
+    export type escapeString = g_this.SYNC.F.EscapeString
+}
 
 export type API = {
-    escapeMultilineString: escapeMultilineString
-    escapeString: escapeString
+    escapeMultilineString: A.escapeMultilineString
+    escapeString: A.escapeString
 }

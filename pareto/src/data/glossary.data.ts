@@ -1,18 +1,14 @@
 import * as pd from 'pareto-core-data'
 
 import {
-    string,
-    null_,
-    nested,
-    dictionary, member, taggedUnion, types, group,
+    string, member, group,
     array,
     typeReference,
-    sdata,
+    data,
     boolean,
     sfunc,
     type,
     optional,
-    number,
     externalTypeReference,
     imp,
 } from "lib-pareto-typescript-project/dist/submodules/glossary/shorthands"
@@ -36,13 +32,17 @@ export const $: g_glossary.T.Glossary<pd.SourceLocation> = {
             "indentation": member(string()),
         })),
     }),
-    'type': ['synchronous', {
-        'builders': d({
-        }),
+    'asynchronous': {
+        'interfaces': d({}),
+        'constructors': d({}),
+        'functions': d({}),
+    },
+    'synchronous': {
+        'interfaces': d({}),
+        'constructors': d({}),
         'functions': d({
-            "EscapeString": sfunc(sdata(typeReference("EscapeStringData")), sdata(externalTypeReference("common", "String"))),
-            "EscapeMultilineString": sfunc(sdata(typeReference("EscapeMultilineStringData")), sdata(externalTypeReference("common", "String"))),
+            "EscapeString": sfunc(data(typeReference("EscapeStringData")), externalTypeReference("common", "String")),
+            "EscapeMultilineString": sfunc(data(typeReference("EscapeMultilineStringData")), externalTypeReference("common", "String")),
         }),
-
-    }],
+    },
 }

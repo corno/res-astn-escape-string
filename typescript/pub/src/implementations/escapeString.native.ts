@@ -1,8 +1,8 @@
 import * as pi from 'pareto-core-internals'
 
-import { escapeString } from "../api.generated"
+import { A } from "../api.generated"
 
-export const $$:escapeString = ($) => {
+export const $$: A.escapeString = ($) => {
     let out = ""
     for (let i = 0; i !== $.str.length; i += 1) {
         const curChar = $.str.charCodeAt(i)
