@@ -6,7 +6,7 @@ import {
     typeReference,
     data,
     boolean,
-    sfunc,
+    sfunction,
     type,
     optional,
     externalTypeReference,
@@ -34,15 +34,14 @@ export const $: g_glossary.T.Glossary<pd.SourceLocation> = {
     }),
     'asynchronous': {
         'interfaces': d({}),
-        'constructors': d({}),
-        'functions': d({}),
+        'algorithms': d({}),
+        
     },
     'synchronous': {
         'interfaces': d({}),
-        'constructors': d({}),
-        'functions': d({
-            "EscapeString": sfunc(data(typeReference("EscapeStringData")), externalTypeReference("common", "String")),
-            "EscapeMultilineString": sfunc(data(typeReference("EscapeMultilineStringData")), externalTypeReference("common", "String")),
+        'algorithms': d({
+            "EscapeString": sfunction(externalTypeReference("common", "String"), data(typeReference("EscapeStringData"))),
+            "EscapeMultilineString": sfunction(externalTypeReference("common", "String"), data(typeReference("EscapeMultilineStringData"))),
         }),
     },
 }
