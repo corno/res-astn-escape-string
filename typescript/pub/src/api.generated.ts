@@ -10,6 +10,6 @@ export namespace A {
 }
 
 export type API = {
-    escapeMultilineString: A.escapeMultilineString
-    escapeString: A.escapeString
+    readonly 'escapeMultilineString': A.escapeMultilineString
+    readonly 'escapeString': A.escapeString
 }
