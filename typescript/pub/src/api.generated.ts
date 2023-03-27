@@ -2,6 +2,11 @@ import * as pt from 'pareto-core-types'
 
 import * as g_this from "./glossary"
 
+export namespace D {
+    
+    
+}
+
 export namespace A {
     
     export type escapeMultilineString = () => g_this.SYNC.A.F.EscapeMultilineString
