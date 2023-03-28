@@ -21,21 +21,24 @@ export const $: g_glossary.T.Glossary<pd.SourceLocation> = {
     'imports': d({
         "common": imp({})
     }),
-    'types': d({
-        "EscapeStringData": type(group({
-            "str": member(string()),
-            "escapeTabsAndNewLines": member(boolean()),
-            "wrapperToEscape": member(optional(string())),
-        })),
-        "EscapeMultilineStringData": type(group({
-            "lines": member(array(string())),
-            "indentation": member(string()),
-        })),
-    }),
+    'root': {
+        'namespaces': d({}),
+        'types': d({
+            "EscapeStringData": type(group({
+                "str": member(string()),
+                "escapeTabsAndNewLines": member(boolean()),
+                "wrapperToEscape": member(optional(string())),
+            })),
+            "EscapeMultilineStringData": type(group({
+                "lines": member(array(string())),
+                "indentation": member(string()),
+            })),
+        }),
+    },
     'asynchronous': {
         'interfaces': d({}),
         'algorithms': d({}),
-        
+
     },
     'synchronous': {
         'interfaces': d({}),
